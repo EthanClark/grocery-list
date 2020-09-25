@@ -14,17 +14,16 @@ class App extends Component {
 
   renderListItems = () => {
     const { listItems } = this.state;
-    return listItems.map( listItems => {
+    return listItems.map( fruit => {
       return (
-        <li key={listItems.id}>{listItems.name, listItems.price, 
-          listItems.quantity}</li>
+        <List key= {fruit.id} {...fruit}/>
       )
     })
   };
   render() {
     return (
       <div>
-        { this.renderListItems}
+        { this.renderListItems()}
       </div>
     );
   }

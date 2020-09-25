@@ -1,10 +1,9 @@
 import React from 'react';
 
-const List = ({listItem, name, price, quantity}) => (
+const List = ({ name, price, quantity}) => (
   <div>
-    <h2>{name}</h2>
     <ul>
-      { listItem.map( listItem => <li key={listItem.id}>{listItem.neme, listItem.price, listItem.quantity}</li>) }
+      <li>{name}- price:${price} quantity:{quantity}</li>
     </ul>
   </div>
 );
